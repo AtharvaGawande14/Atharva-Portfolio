@@ -8,6 +8,7 @@ export const profile = {
   phone: "+91 7219889469",
   github: "https://github.com/AtharvaGawande14",
   linkedin: "https://linkedin.com/in/atharvagawande14",
+  resumeUrl: "https://customer-assets-lqy194kg.emergentagent.net/job_portfolio-pro-2790/artifacts/ymmniw6j_Atharva_Gawande_CV_SED.pdf",
   about: [
     "I'm a BCA graduate from G. H. Raisoni University who builds things that actually ship — from a voice-controlled AI desktop assistant to full-stack dashboards that turn raw engineering metrics into decisions.",
     "My sweet spot is where clean frontend craft meets Python backends and LLM integration. I care about sub-2s load times, honest interfaces, and code that survives contact with real users.",

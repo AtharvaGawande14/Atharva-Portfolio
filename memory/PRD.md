@@ -37,16 +37,17 @@
 - Certifications: infinite marquee with 4 certs + LinkedIn link
 - Contact: giant LET'S TALK footer, mailto CTA, GitHub/LinkedIn rows
 - Custom cursor (mix-blend-difference), magnetic buttons, noise overlay, glassmorphic nav
+- Download CV button in hero (links to uploaded resume PDF — verified 200/PDF)
+- Mobile slide-in menu with numbered links (hamburger on <md screens)
 
 ## Backlog
 - P0: Replace project images with real screenshots per project (user to provide)
 - P0: Per-project GitHub repo links (currently all point to repos tab)
 - P1: Add remaining GitHub projects beyond the 4 resume ones (user mentioned more exist)
 - P1: Working contact form (Resend managed email) if user wants more than mailto
-- P2: Mobile hamburger menu (nav links hidden on mobile currently)
 - P2: Project detail modals/pages with demos
-- P2: Downloadable resume PDF button
 - P2: Theme variants (user said design may change later)
+- P2: User exploring GitHub export + deployment (Vercel/Netlify); contacted support re: 7-day plan credits
 
 ## Next Tasks
 1. Collect real project screenshots + repo URLs from user
