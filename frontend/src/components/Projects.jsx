@@ -32,7 +32,9 @@ const ProjectPanel = ({ project }) => {
             {project.tagline}
           </p>
           <h3 className="mb-4 font-display text-3xl font-black tracking-tight md:text-5xl">{project.title}</h3>
-          <p className="mb-6 text-sm font-normal leading-relaxed text-gray-100 md:text-base">{project.description}</p>
+          <p className="mb-6 text-sm font-normal leading-relaxed text-white md:text-base" style={{ color: "#FFFFFF" }}>
+            {project.description}
+          </p>
           <div className="mb-6 flex flex-wrap gap-2">
             {project.tech.map((t) => (
               <span
