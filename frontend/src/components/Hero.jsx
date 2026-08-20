@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, MapPin } from "lucide-react";
-import { Magnetic } from "./Magnetic";
 import { profile } from "../data/portfolio";
 
 const Letters = ({ text, delay = 0, className = "" }) => (
@@ -68,7 +67,7 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 1.3 }}
             className="flex flex-wrap items-center gap-5"
           >
-            <Magnetic>
+            
               <a
                 href="#projects"
                 onClick={go("#projects")}
@@ -78,8 +77,8 @@ export const Hero = () => {
                 <span className="absolute inset-0 translate-y-full bg-lime transition-transform duration-300 ease-out group-hover:translate-y-0" />
                 <span className="relative transition-colors duration-300 group-hover:text-black">View My Work</span>
               </a>
-            </Magnetic>
-            <Magnetic>
+            
+            
               <a
                 href="#contact"
                 onClick={go("#contact")}
@@ -89,8 +88,8 @@ export const Hero = () => {
                 <span className="absolute inset-0 translate-y-full bg-white transition-transform duration-300 ease-out group-hover:translate-y-0" />
                 <span className="relative transition-colors duration-300 group-hover:text-black">Get In Touch</span>
               </a>
-            </Magnetic>
-            <Magnetic>
+            
+            
               <a
                 href={profile.resumeUrl}
                 target="_blank"
@@ -101,7 +100,7 @@ export const Hero = () => {
                 <Download size={15} className="transition-transform duration-300 group-hover:translate-y-0.5" />
                 Download CV
               </a>
-            </Magnetic>
+            
           </motion.div>
         </div>
 

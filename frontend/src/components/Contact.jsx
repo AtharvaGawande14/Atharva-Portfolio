@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
-import { Magnetic } from "./Magnetic";
 import { profile } from "../data/portfolio";
 
 const socials = [
@@ -43,7 +42,7 @@ export const Contact = () => (
         transition={{ duration: 0.7, delay: 0.15 }}
         className="mt-14 md:mt-20"
       >
-        <Magnetic strength={0.25}>
+        
           <a
             href={`mailto:${profile.email}`}
             data-testid="contact-email-btn"
@@ -53,7 +52,7 @@ export const Contact = () => (
             <Mail size={18} className="relative transition-colors duration-300 group-hover:text-black" />
             <span className="relative transition-colors duration-300 group-hover:text-black">{profile.email}</span>
           </a>
-        </Magnetic>
+        
       </motion.div>
 
       <div className="mt-20 grid gap-px border-t border-white/10 bg-white/10 md:mt-28 md:grid-cols-2">

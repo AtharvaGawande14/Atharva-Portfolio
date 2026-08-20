@@ -27,12 +27,12 @@ const ProjectPanel = ({ project }) => {
       </span>
 
       <div className="absolute bottom-0 left-0 w-full p-6 md:max-w-2xl md:p-12">
-        <div className="border border-white/10 bg-black/50 p-6 backdrop-blur-xl md:p-9">
+        <div className="border border-white/10 bg-black/80 p-6 backdrop-blur-xl md:p-9">
           <p className={`mb-2 font-tech text-[11px] uppercase tracking-[0.3em] ${isLime ? "text-lime" : "text-neon"}`}>
             {project.tagline}
           </p>
           <h3 className="mb-4 font-display text-3xl font-black tracking-tight md:text-5xl">{project.title}</h3>
-          <p className="mb-6 text-sm font-light leading-relaxed text-gray-200 md:text-base">{project.description}</p>
+          <p className="mb-6 text-sm font-normal leading-relaxed text-gray-100 md:text-base">{project.description}</p>
           <div className="mb-6 flex flex-wrap gap-2">
             {project.tech.map((t) => (
               <span
@@ -56,9 +56,9 @@ const ProjectPanel = ({ project }) => {
               <Github size={14} /> View on GitHub
               <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
             </a>
-            {project.live && (
+            {(
               <a
-                href={project.live}
+                href={project.live || profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid={`project-live-${project.id}`}

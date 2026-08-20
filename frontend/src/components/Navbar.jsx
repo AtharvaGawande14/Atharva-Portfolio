@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Magnetic } from "./Magnetic";
 import { profile } from "../data/portfolio";
 
 const links = [
@@ -64,7 +63,7 @@ export const Navbar = () => {
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden sm:block">
-              <Magnetic>
+              
                 <a
                   href={`mailto:${profile.email}`}
                   data-testid="nav-email-cta"
@@ -73,7 +72,7 @@ export const Navbar = () => {
                   <span className="absolute inset-0 translate-y-full bg-lime transition-transform duration-300 ease-out group-hover:translate-y-0" />
                   <span className="relative transition-colors duration-300 group-hover:text-black">Email Me</span>
                 </a>
-              </Magnetic>
+              
             </div>
             <button
               onClick={() => setMenuOpen((v) => !v)}
