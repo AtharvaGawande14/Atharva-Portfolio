@@ -33,6 +33,7 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1600&auto=format&fit=crop",
     accent: "lime",
+    live: null,
   },
   {
     id: "dev-dashboard",
@@ -45,6 +46,7 @@ export const projects = [
     image:
       "https://images.pexels.com/photos/27141307/pexels-photo-27141307.jpeg?auto=compress&cs=tinysrgb&w=1600",
     accent: "cyan",
+    live: null,
   },
   {
     id: "pipeline-builder",
@@ -69,6 +71,7 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop",
     accent: "cyan",
+    live: null,
   },
 ];
 

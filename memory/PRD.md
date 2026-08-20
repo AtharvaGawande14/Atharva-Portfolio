@@ -39,6 +39,7 @@
 - Custom cursor (mix-blend-difference), magnetic buttons, noise overlay, glassmorphic nav
 - Download CV button in hero (links to uploaded resume PDF — verified 200/PDF)
 - Mobile slide-in menu with numbered links (hamburger on <md screens)
+- User feedback round: project description text brightened (gray-200, inverts to black under white cursor); "Live Demo" link slot per project (renders when project.live set in portfolio.js — awaiting user's deployed URLs); certifications marquee speed 35→60 + title got nav-style lime underline sweep on hover
 
 ## Backlog
 - P0: Replace project images with real screenshots per project (user to provide)

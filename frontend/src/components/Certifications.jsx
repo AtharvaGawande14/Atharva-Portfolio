@@ -16,10 +16,15 @@ const CertItem = ({ cert }) => (
 
 export const Certifications = () => (
   <section className="relative overflow-hidden border-y border-white/10 py-20 md:py-28" data-testid="certifications-section">
-    <p className="mb-12 px-6 text-center font-tech text-xs uppercase tracking-[0.35em] text-muted md:px-12" data-testid="certifications-overline">
+    <p
+      className="group relative mx-auto mb-12 w-max px-6 text-center font-tech text-xs uppercase tracking-[0.35em] text-gray-300 md:px-12"
+      data-testid="certifications-overline"
+      data-cursor-hover
+    >
       Certifications — a few highlights
+      <span className="absolute -bottom-2 left-6 right-6 h-px w-0 bg-lime transition-[width] duration-300 group-hover:w-[calc(100%-3rem)]" />
     </p>
-    <Marquee speed={35} gradient={false} pauseOnHover>
+    <Marquee speed={60} gradient={false} pauseOnHover>
       {certifications.map((c) => (
         <CertItem key={c.id} cert={c} />
       ))}

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, Globe } from "lucide-react";
 import { projects, profile } from "../data/portfolio";
 
 const ProjectPanel = ({ project }) => {
@@ -32,29 +32,43 @@ const ProjectPanel = ({ project }) => {
             {project.tagline}
           </p>
           <h3 className="mb-4 font-display text-3xl font-black tracking-tight md:text-5xl">{project.title}</h3>
-          <p className="mb-6 text-sm font-light leading-relaxed text-muted md:text-base">{project.description}</p>
+          <p className="mb-6 text-sm font-light leading-relaxed text-gray-200 md:text-base">{project.description}</p>
           <div className="mb-6 flex flex-wrap gap-2">
             {project.tech.map((t) => (
               <span
                 key={t}
-                className="border border-white/15 px-3 py-1 font-tech text-[10px] uppercase tracking-[0.15em] text-muted"
+                className="border border-white/25 px-3 py-1 font-tech text-[10px] uppercase tracking-[0.15em] text-gray-300"
               >
                 {t}
               </span>
             ))}
           </div>
-          <a
-            href={`${profile.github}?tab=repositories`}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid={`project-link-${project.id}`}
-            className={`group/link inline-flex items-center gap-2 font-tech text-xs uppercase tracking-[0.25em] transition-colors duration-300 ${
-              isLime ? "text-lime" : "text-neon"
-            }`}
-          >
-            <Github size={14} /> View on GitHub
-            <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-          </a>
+          <div className="flex flex-wrap items-center gap-6">
+            <a
+              href={`${profile.github}?tab=repositories`}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid={`project-link-${project.id}`}
+              className={`group/link inline-flex items-center gap-2 font-tech text-xs uppercase tracking-[0.25em] transition-colors duration-300 ${
+                isLime ? "text-lime" : "text-neon"
+              }`}
+            >
+              <Github size={14} /> View on GitHub
+              <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+            </a>
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid={`project-live-${project.id}`}
+                className="group/live inline-flex items-center gap-2 font-tech text-xs uppercase tracking-[0.25em] text-white transition-colors duration-300 hover:text-lime"
+              >
+                <Globe size={14} /> Live Demo
+                <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5" />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
