@@ -1,0 +1,112 @@
+{
+  "theme": "dark",
+  "typography": {
+    "headings": {
+      "family": "'Cabinet Grotesk', sans-serif",
+      "weight": "font-black or font-bold",
+      "tracking": "tracking-tighter",
+      "usage": "Hero title, section headers. Never center by default except in Hero. Do NOT use Inter, Roboto, or Space Grotesk."
+    },
+    "subheadings": {
+      "family": "'JetBrains Mono', monospace",
+      "weight": "font-medium",
+      "tracking": "tracking-widest",
+      "transform": "uppercase",
+      "usage": "Overlines, labels, technical metadata, and small functional text."
+    },
+    "body": {
+      "family": "'Outfit', sans-serif",
+      "weight": "font-light",
+      "tracking": "tracking-normal",
+      "usage": "Paragraphs, project descriptions, and general text."
+    }
+  },
+  "colors": {
+    "css_variables": {
+      "--bg-base": "#050505",
+      "--bg-surface": "#0A0A0A",
+      "--bg-card": "#111111",
+      "--text-primary": "#F3F4F6",
+      "--text-secondary": "#9CA3AF",
+      "--accent-lime": "#CAFF00",
+      "--accent-cyan": "#00F0FF",
+      "--border-subtle": "rgba(255, 255, 255, 0.05)",
+      "--border-hover": "rgba(202, 255, 0, 0.3)"
+    },
+    "strategy": "Archetype: ELECTRIC & NEON but heavily grounded. 95% of the UI must be pitch black/monochrome. Colors exist ONLY as 1px accents, hover states, or text highlights. Do NOT use gradients for backgrounds. Forbidden color: #7351B7."
+  },
+  "visual_enhancers": {
+    "noise_overlay": "MANDATORY: Add a fixed pointer-events-none div over the entire app with a subtle SVG noise/grain background (opacity 3-5%) to kill the 'digital flatness'.",
+    "custom_cursor": "Create a custom cursor using framer-motion that follows the mouse. Use `mix-blend-mode: difference` and a white circle. Scale it up when hovering over interactive elements.",
+    "magnetic_buttons": "Wrap key CTAs and social links in a framer-motion component that slightly translates (x, y) towards the mouse position on hover using spring physics.",
+    "glassmorphism": "For sticky nav, use backdrop-blur-xl bg-black/50 with a 1px bottom border of white/10. NEVER use completely transparent backgrounds where content scrolls underneath."
+  },
+  "layouts": {
+    "spacing_rhythm": "Use generous spacing. p-8 to p-16 for containers. Gap-12 to gap-24 between sections.",
+    "hero": "100vh, vertically centered. Huge staggered typography for 'ATHARVA GAWANDE'. Subtitle: 'Software Developer / Engineer' in Mono font. A subtle background gradient orb or floating 3D/abstract element.",
+    "projects": "Showcase layout. Do NOT use a standard CSS grid/boring cards. Use a sticky horizontal scroll section. As the user scrolls vertically, the projects container scrolls horizontally. Each project is large (80vw), cinematic, with the image taking up most space and text floating above with backdrop-blur.",
+    "skills": "Bento grid (Tetris mode) or an infinite slow marquee of floating tech logos or glowing orbit rings. Group by frontend, backend, tools.",
+    "certifications": "The 'Editorial Ribbon'. A highly spaced, slow-moving infinite marquee using 'react-fast-marquee'. Show 3-4 certs + 'View all on LinkedIn'. Monochrome look with mono font.",
+    "about": "Asymmetrical layout. Cinematic dark silhouette photo of developer on one side, raw honest text on the other. High contrast.",
+    "contact": "Massive footer. 'LET\\'S TALK' taking up 10vw size. Links to Email, GitHub, LinkedIn with magnetic hover effects."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Use Lenis for smooth momentum scrolling. It gives the site a premium weight.",
+    "reveals": "Use framer-motion `whileInView`. Elements should slide up (y: 30 to 0) and fade in, staggered.",
+    "hover": "High contrast shifts. Buttons should have their border light up or background slide in. Image scales up slightly inside an overflow-hidden container."
+  },
+  "components": {
+    "nav": "Fixed at top, z-50. Glassmorphism background. Do not hide links on desktop. Logo left, links right. Add an 'Email Me' CTA button.",
+    "project_item": "A full-bleed or heavily padded container. Image uses scale transform on hover (slow, like duration 1.5s). Text is overlaid. DO NOT use generic Shadcn Card here, use pure HTML/Tailwind.",
+    "button": "Sharp rectangular with 1px border. On hover, background fills with accent color (--accent-lime) and text goes black."
+  },
+  "image_urls": {
+    "projects": [
+      {
+        "url": "https://images.pexels.com/photos/27141307/pexels-photo-27141307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Dashboard/UI project placeholder"
+      },
+      {
+        "url": "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Analytics/Data project placeholder"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGRhcmslMjBuZW9uJTIwdGVjaHxlbnwwfHx8fDE3ODcyMTgxMTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract Web3/Crypto project placeholder"
+      }
+    ],
+    "about": [
+      {
+        "url": "https://images.pexels.com/photos/16018144/pexels-photo-16018144.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Atmospheric cinematic developer portrait placeholder"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use framer-motion heavily for scroll reveals (whileInView) and hover effects.",
+    "Write components in .js or .jsx files. DO NOT USE .tsx.",
+    "Set up Lenis (from '@studio-freight/lenis' or 'lenis') in the root App.js for smooth scrolling.",
+    "Install and use 'react-fast-marquee' for the certifications strip.",
+    "Install and use 'lucide-react' for icons.",
+    "For the Projects section, implement a sticky horizontal scroll using Framer Motion's useScroll and useTransform hooks. Do not make a standard 3-column grid.",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Use pure Tailwind for the main layout. Do not over-rely on pre-built generic UI cards for the portfolio showcase; they look cheap. Use custom raw div layouts with generous padding (p-12, p-16).",
+    "Font installation: Import Cabinet Grotesk, JetBrains Mono, and Outfit via Google Fonts or Fontshare in index.css.",
+    "Apply the noise overlay globally as a fixed div with pointer-events-none."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "GENERAL UI UX DESIGN GUIDELINES",
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like robot/brain/etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "All interactive and key informational elements MUST include a data-testid attribute."
+  ]
+}

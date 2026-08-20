@@ -1,0 +1,111 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-base: #050505;
+    --bg-surface: #0A0A0A;
+    --bg-card: #111111;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --accent-lime: #CAFF00;
+    --accent-cyan: #00F0FF;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--accent-lime);
+    color: #050505;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-lime);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    body, a, button, [data-cursor-hover] {
+        cursor: none;
+    }
+}
+
+.font-display {
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+.font-tech {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1.5px rgba(243, 244, 246, 0.85);
+    color: transparent;
+}
+
+.text-stroke-lime {
+    -webkit-text-stroke: 1.5px var(--accent-lime);
+    color: transparent;
+}
+
+.noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border: inherit;
+    }
+}
