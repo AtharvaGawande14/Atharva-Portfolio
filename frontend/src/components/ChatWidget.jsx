@@ -103,7 +103,7 @@ export const ChatWidget = () => {
               <p className="flex items-center gap-2 font-tech text-xs uppercase tracking-[0.3em] text-lime">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-lime" /> Ask Me Anything
               </p>
-              <p className="mt-1.5 text-xs font-light text-muted">AI trained on Atharva's resume — projects, skills, experience.</p>
+              <p className="mt-1.5 text-xs font-light text-muted">Talks like Atharva himself — trained on his resume.</p>
             </div>
 
             <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-5" data-testid="chat-messages">
