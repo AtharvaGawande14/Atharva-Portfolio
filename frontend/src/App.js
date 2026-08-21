@@ -9,6 +9,7 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Certifications } from "./components/Certifications";
 import { Contact } from "./components/Contact";
+import { ChatWidget } from "./components/ChatWidget";
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
+      <ChatWidget />
     </div>
   );
 }
