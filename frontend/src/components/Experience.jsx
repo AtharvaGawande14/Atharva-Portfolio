@@ -25,7 +25,7 @@ export const Experience = () => (
               <p className="mb-5 mt-1 font-tech text-xs uppercase tracking-[0.2em] text-muted">{job.company}</p>
               <ul className="space-y-3">
                 {job.points.map((pt, pi) => (
-                  <li key={pi} className="flex gap-3 text-sm font-light leading-relaxed text-muted md:text-base">
+                  <li key={pi} className="flex gap-3 text-sm font-light leading-relaxed md:text-base" style={{ color: "#D1D5DB" }}>
                     <span className="mt-2 h-px w-4 shrink-0 bg-lime/60" />
                     {pt}
                   </li>
